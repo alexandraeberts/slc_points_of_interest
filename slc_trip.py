@@ -9,7 +9,7 @@ import geopandas as gpd
 import folium
 import pandas as pd
 
-slc = slc = folium.Map(location = [40.7608, -111.8910], tiles = 'openstreetmap', zoom_start = 10)
+slc = folium.Map(location = [40.7608, -111.8910], tiles = 'openstreetmap', zoom_start = 10)
 slc.save('slc.html')
 
 poi = pd.read_csv('https://raw.githubusercontent.com/alexandraeberts/slc_points_of_interest/main/poi.csv', encoding='ISO-8859–1')
