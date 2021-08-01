@@ -12,7 +12,7 @@ import pandas as pd
 slc = folium.Map(location = [40.7608, -111.8910], tiles = 'openstreetmap', zoom_start = 10)
 slc.save('slc.html')
 
-poi = pd.read_csv('https://raw.githubusercontent.com/alexandraeberts/slc_points_of_interest/main/poi.csv', encoding='ISO-8859–1')
+poi = pd.read_csv('poi.csv')
 poi
 
 trip = gpd.GeoDataFrame(poi, geometry = gpd.points_from_xy(poi.Longitude, poi.Latitude))
