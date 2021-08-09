@@ -22,11 +22,15 @@ locations.info()
 print(locations.crs)
 locations.crs = 'EPSG:2272'
 
+#add in second input t2, that searches closest options to both t1 and loc?
+
 def loc_sel(loc, t1):
     #subset by t1
     sub = locations[locations['Type'] == t1]
     distance = sub.geometry.distance(loc.geometry)
     return print(locations.iloc[distance.idxmin()][['Name']])
+
+
 
 loc_sel(locations.iloc[9], 'Restaurant')
 
